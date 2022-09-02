@@ -31,7 +31,7 @@ aside {
   padding-top: 270px;
 }
 .container {
-  padding-bottom: 100px;
+  padding: 0 11% 100px 8%;
 }
 .photodiary-title {
   font-size: 14px;
@@ -210,4 +210,208 @@ aside {
 }
 main {
   width: 70%;
+}
+#aside {
+  position: fixed;
+  top: -265px;
+  right: 0;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .sign-up div {
+    margin-right: 0px;
+  }
+  .sign-up div:last-child {
+    margin-right: 0px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .sign-up {
+    padding: 30px 90px 40px 90px;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu li {
+    flex: 1 1 auto;
+    margin: 0 2px;
+  }
+  .menu {
+    margin-top: 50px;
+  }
+  .slider {
+    width: 90vw;
+  }
+
+  .slide {
+    width: 90vw;
+  }
+
+  .slide img {
+    width: 90vw;
+    height: 100vh;
+  }
+  .photodiary {
+    text-align: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-left,
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
+  .footer-right {
+    margin-left: -25%;
+  }
+}
+@media (min-width: 480px) and (max-width: 575px) {
+  .sign-up div {
+    margin-right: 40px;
+  }
+  .sign-up div:last-child {
+    margin-right: 40px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .sign-up {
+    padding: 30px 90px 40px 90px;
+  }
+  header {
+    margin: 70px 50px;
+  }
+  .menu li {
+    flex: 1 1 auto;
+    margin: 0 2px;
+  }
+  .photodiary {
+    text-align: center;
+  }
+  .slider {
+    width: 90vw;
+  }
+
+  .slide {
+    width: 90vw;
+  }
+
+  .slide img {
+    width: 90vw;
+    height: 100vh;
+  }
+  footer {
+    padding: 35px 20px 36px 20px;
+  }
+  footer div {
+    margin-right: 10px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .sign-up {
+    padding: 30px 90px 40px 90px;
+  }
+  .sign-up div:last-child {
+    margin-right: 50px;
+  }
+  .menu li {
+    flex: 1 1 auto;
+    margin: 0 10px;
+  }
+  .photodiary {
+    text-align: center;
+  }
+  .slider {
+    width: 90vw;
+  }
+
+  .slide {
+    width: 90vw;
+  }
+
+  .slide img {
+    width: 90vw;
+    height: 100vh;
+  }
+
+  footer {
+    padding: 35px 47px 36px 38px;
+  }
+}
+@media (min-width: 768px) and (max-width: 978px) {
+  .sign-up {
+    padding: 50px 90px 70px 90px;
+  }
+  .menu li {
+    flex: 1 1 auto;
+    margin: 0 30px;
+  }
+  .photodiary {
+    text-align: center;
+  }
+  .slider {
+    width: 90vw;
+  }
+
+  .slide {
+    width: 90vw;
+  }
+
+  .slide img {
+    width: 90vw;
+    height: 100vh;
+  }
+}
+@media (min-width: 979px) and (max-width: 1100px) {
+  .photodiary {
+    padding: 70px 11% 100px 8%;
+  }
+  .slider {
+    width: 90vw;
+  }
+
+  .slide {
+    width: 90vw;
+  }
+
+  .slide img {
+    width: 90vw;
+    height: 100vh;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+h4,
+h5 {
+  margin: 10px 0;
+  text-rendering: optimizelegibility;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
 }
