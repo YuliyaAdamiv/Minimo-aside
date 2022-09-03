@@ -52,7 +52,18 @@ aside {
   color: rgb(98, 98, 98);
   line-height: 1.714;
   padding-top: 7px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+.com {
+  margin-top: 50px;
+}
+.italic {
+  font-size: 12px;
+  font-family: 'Ubuntu';
+  font-style: italic;
+  line-height: 1.2;
+  color: rgb(98, 98, 98);
+  margin: 20px;
 }
 .share {
   display: flex;
@@ -69,7 +80,7 @@ aside {
 .icon div {
   margin-right: 10px;
 }
-.share h5 {
+.share p {
   margin-right: 10px;
 }
 .sign-up {
@@ -81,7 +92,18 @@ aside {
   flex-direction: row;
 }
 .card-name {
-  font-size: 20px;
+  font-size: 18px;
+  font-family: 'PlayfairDisplay';
+  color: rgb(98, 98, 98);
+  line-height: 1.2;
+  padding-bottom: 5px;
+}
+.card-name-comment {
+  font-size: 18px;
+  font-family: 'PlayfairDisplay';
+  color: rgb(98, 98, 98);
+  line-height: 1.2;
+  padding-bottom: 5px;
 }
 .sign-up div {
   margin-right: 50px;
@@ -89,13 +111,8 @@ aside {
 .sign-up div:last-child {
   margin-right: 0;
 }
-h4 {
-  font-size: 14px;
-  font-family: 'PlayfairDisplay';
-  color: rgb(98, 98, 98);
-  line-height: 1.2;
-}
-h5 {
+
+.card-title {
   font-size: 12px;
   font-family: 'Ubuntu';
   color: rgb(180, 173, 158);
@@ -181,15 +198,18 @@ footer div {
 }
 .img {
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
+  height: 100px;
+  width: 100px;
   margin-right: 20px;
 }
 .comment {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
+}
+.comments div {
+  margin-bottom: 20px;
 }
 input {
   width: 100%;
@@ -247,6 +267,9 @@ main {
   }
   .slider {
     width: 90vw;
+  }
+  .card-name {
+    padding: 30px 0;
   }
 
   .slide {
@@ -310,7 +333,9 @@ main {
   .slide {
     width: 90vw;
   }
-
+  .card-name {
+    padding: 30px 0;
+  }
   .slide img {
     width: 90vw;
     height: 100vh;
@@ -328,6 +353,9 @@ main {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+  }
+  .card-name {
+    padding: 30px 0;
   }
   .sign-up {
     padding: 30px 90px 40px 90px;
