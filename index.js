@@ -27,3 +27,25 @@ prevSlide.addEventListener('click', function () {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
 });
+
+$(document).ready(function () {
+  var summaries = $('.aside');
+  summaries.each(function (i) {
+    var summary = $(summaries[i]);
+    var next = summaries[i + 1];
+
+    summary.scrollToFixed({
+      marginTop: $('.first').outerHeight(true) + 10,
+      limit: function () {
+        var limit = 0;
+        if (next) {
+          limit = $(next).offset().top - $(this).outerHeight(true) - 10;
+        } else {
+          limit = $('.sign-up').offset().top - $(this).outerHeight(true) - 10;
+        }
+        return limit;
+      },
+      zIndex: 999,
+    });
+  });
+});

@@ -14,24 +14,36 @@ header ul {
   list-style-type: none;
 }
 .menu {
-  font-size: 14px;
-  font-family: 'PlayfairDisplay';
-  color: rgb(98, 98, 98);
-  text-transform: uppercase;
-  line-height: 1.714;
   display: flex;
   margin: 0 -50px;
 }
 .menu li {
   flex: 1 1 auto;
   margin: 0 58px;
+  font-size: 14px;
+  font-family: 'PlayfairDisplay';
+  color: rgb(98, 98, 98);
+  text-transform: uppercase;
+  line-height: 1.714;
+}
+ul {
+  list-style: none;
+}
+aside ul li::before {
+  content: '\2022';
+  color: rgb(180, 173, 158);
+  display: inline-block;
+  margin-left: -1em;
+  font-weight: bold;
+  width: 1em;
 }
 .photodiary,
 aside {
-  padding-top: 270px;
+  padding-top: 75px;
 }
 .container {
-  padding: 0 11% 100px 8%;
+  max-width: 1065px;
+  padding: 0 11% 100px 11%;
 }
 .photodiary-title {
   font-size: 14px;
@@ -80,9 +92,13 @@ aside {
 .icon div {
   margin-right: 10px;
 }
+.share div {
+  color: #626262;
+}
 .share p {
   margin-right: 10px;
 }
+
 .sign-up {
   padding: 70px 112px 70px 125px;
   background: #f0f0f0;
@@ -97,6 +113,7 @@ aside {
   color: rgb(98, 98, 98);
   line-height: 1.2;
   padding-bottom: 5px;
+  padding: 30px 0;
 }
 .card-name-comment {
   font-size: 18px;
@@ -113,7 +130,7 @@ aside {
 }
 
 .card-title {
-  font-size: 12px;
+  font-size: 14px;
   font-family: 'Ubuntu';
   color: rgb(180, 173, 158);
   text-transform: uppercase;
@@ -127,19 +144,24 @@ aside {
 }
 
 .slider {
-  width: 100%;
+  width: 100vw;
   max-width: 1062px;
-  height: 509px;
+  height: 100vh;
   position: relative;
   overflow: hidden; /* <===  */
 }
 
 .slide {
-  width: 100%;
+  width: 100vw;
   max-width: 1062px;
-  height: 509px;
+  height: 100vh;
   position: absolute;
   transition: all 0.5s;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: url(./img/image.png);
 }
 
 .slide img {
@@ -150,12 +172,13 @@ aside {
 
 .btn {
   position: absolute;
+  top: 400px;
   width: 40px;
-  height: 509px;
+  height: 40px;
+  border-radius: 50%;
   border: none;
   cursor: pointer;
   font-size: 18px;
-  opacity: 0;
 }
 .btn:active {
   transform: scale(1.1);
@@ -178,10 +201,6 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 14px;
-  font-family: 'PlayfairDisplay';
-  color: rgb(0, 0, 0);
-  line-height: 1.714;
   background: #f0f0f0;
 }
 .footer-left {
@@ -195,6 +214,10 @@ footer {
 }
 footer div {
   margin-right: 20px;
+  font-size: 14px;
+  font-family: 'PlayfairDisplay';
+  color: rgb(0, 0, 0);
+  line-height: 1.714;
 }
 .img {
   border-radius: 50%;
@@ -213,8 +236,16 @@ footer div {
 }
 input {
   width: 100%;
-  padding: 25px 0 25px 20px;
+  margin: 20px 0;
+  padding: 0 20px;
   border: 1px solid #f0f0f0;
+}
+input::placeholder {
+  color: rgb(180, 173, 158);
+}
+
+.f {
+  color: rgb(0, 0, 0);
 }
 .connect {
   display: flex;
@@ -224,19 +255,27 @@ input {
   display: flex;
   flex-direction: row;
 }
-aside {
-  width: 30%;
-  margin-left: 50px;
+.count {
+  font-size: 11px;
 }
 main {
   width: 70%;
 }
-#aside {
-  position: fixed;
-  top: -265px;
+.aside.scroll-to-fixed-fixed {
+  margin-top: -80px;
+}
+.aside {
+  width: 30%;
+  margin-left: 50px;
+  position: sticky;
+  top: 0;
   right: 0;
 }
 @media (min-width: 320px) and (max-width: 479px) {
+  .photodiary {
+    padding: 60px 11% 10px 8%;
+    width: 100%;
+  }
   .sign-up div {
     margin-right: 0px;
   }
@@ -268,14 +307,16 @@ main {
   .slider {
     width: 90vw;
   }
-  .card-name {
-    padding: 30px 0;
-  }
 
   .slide {
     width: 90vw;
   }
-
+  .aside {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
   .slide img {
     width: 90vw;
     height: 100vh;
@@ -301,11 +342,14 @@ main {
   }
 }
 @media (min-width: 480px) and (max-width: 575px) {
+  .photodiary {
+    padding: 60px 11% 10px 8%;
+  }
   .sign-up div {
-    margin-right: 40px;
+    margin-right: 0px;
   }
   .sign-up div:last-child {
-    margin-right: 40px;
+    margin-right: 0px;
   }
   .cards {
     display: flex;
@@ -317,24 +361,27 @@ main {
     padding: 30px 90px 40px 90px;
   }
   header {
-    margin: 70px 50px;
+    margin: 70px 55px;
   }
   .menu li {
     flex: 1 1 auto;
-    margin: 0 2px;
+    margin: 0 5px;
   }
   .photodiary {
     text-align: center;
+    width: 100%;
   }
   .slider {
     width: 90vw;
   }
-
+  main {
+    width: 100%;
+  }
+  .aside {
+    display: none;
+  }
   .slide {
     width: 90vw;
-  }
-  .card-name {
-    padding: 30px 0;
   }
   .slide img {
     width: 90vw;
@@ -348,20 +395,23 @@ main {
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
+  .photodiary {
+    padding: 60px 11% 10px 8%;
+  }
   .cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
-  .card-name {
-    padding: 30px 0;
-  }
   .sign-up {
     padding: 30px 90px 40px 90px;
   }
+  .sign-up div {
+    margin-right: 0px;
+  }
   .sign-up div:last-child {
-    margin-right: 50px;
+    margin-right: 0px;
   }
   .menu li {
     flex: 1 1 auto;
@@ -388,6 +438,9 @@ main {
   }
 }
 @media (min-width: 768px) and (max-width: 978px) {
+  .photodiary {
+    padding: 60px 11% 10px 8%;
+  }
   .sign-up {
     padding: 50px 90px 70px 90px;
   }

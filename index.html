@@ -28,21 +28,13 @@
     </header>
     <div class="first">
         <div class="slider">
-            <div class="slide">
-                <img src="img/image.png" alt="image" />
-            </div>
-            <div class="slide">
-                <img src="img/image.png" alt="image" />
-            </div>
-            <div class="slide">
-                <img src="img/image.png" alt="image" />
-            </div>
-            <div class="slide">
-                <img src="img/image.png" alt="image" />
-            </div>
-            <button class="btn btn-next"> </button>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <button class="btn btn-next"> ></button>
             <button class="btn btn-prev">
-            </button>
+                < </button>
         </div>
     </div>
     <div class="main-content container">
@@ -74,9 +66,9 @@
             </p>
             </section>
             <section class="photo">
-                <img src="img/image.png" alt="image" />
-                <img src="img/image.png" alt="image" />
-                <img src="img/image.png" alt="image" />
+                <img src="img/1.png" alt="image" />
+                <img src="img/2.png" alt="image" />
+                <img src="img/3.png" alt="image" />
             </section>
             <section class="">
                 <p class="italic">
@@ -138,17 +130,18 @@
                 </div>
             </section>
         </main>
-        <aside id="aside">
+        <aside class="aside">
             <div>
                 <img src="img/aside-photo.png" alt="aside-photo">
                 <p class="photodiary-name">About me </p>
                 <p class="photodiary-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
                     et
                     dolore
                     magna aliqua. Risus sed vulputate odio ut enim blandit volutpat.
                 </p>
-                <div class="icon">
+                <div class="icon card-title">
                     <div><i class="fa fa-facebook" aria-hidden="true"></i></div>
                     <div><i class="fa fa-instagram" aria-hidden="true"></i></div>
                     <div><i class="fa fa-pinterest" aria-hidden="true"></i></div>
@@ -157,15 +150,15 @@
             <div>
                 <p class="card-title">TOP POSTS</p>
                 <ul>
-                    <li>A day exploring the Alps</li>
-                    <p class="card-title">24 comments</p>
-                    <li>American dream</li>
-                    <p class="card-title">19 comments</p>
-                    <li>Cold winter days</li>
-                    <p class="card-title">15 comments</p>
+                    <li class="photodiary-description">A day exploring the Alps</li>
+                    <p class="card-title count">24 comments</p>
+                    <li class="photodiary-description">American dream</li>
+                    <p class="card-title count">19 comments</p>
+                    <li class="photodiary-description">Cold winter days</li>
+                    <p class="card-title count">15 comments</p>
                 </ul>
             </div>
-            <img src="img/card_5.png" alt="image">
+            <img src="img/250x250.png" alt="image">
         </aside>
     </div>
     <section class="sign-up">
@@ -219,7 +212,7 @@
             <div class="share ">
                 <p class='card-title'>CONNECTED WITH</p>
                 <p class='card-title'><i class="fa fa-twitter" aria-hidden="true"></i></p>
-                <p class='card-title'><i class="fa fa-facebook" aria-hidden="true"></i></p>
+                <p class='card-title f'><i class="fa fa-facebook" aria-hidden="true"></i></p>
             </div>
 
         </div>
@@ -239,6 +232,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery-scrolltofixed.js" type="text/javascript"></script>
     <script src="index.js"></script>
 </body>
 
