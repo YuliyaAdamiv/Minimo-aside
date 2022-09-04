@@ -146,7 +146,7 @@ aside {
 .slider {
   width: 100vw;
   max-width: 1062px;
-  height: 100vh;
+  height: 509px;
   position: relative;
   overflow: hidden; /* <===  */
 }
@@ -154,7 +154,7 @@ aside {
 .slide {
   width: 100vw;
   max-width: 1062px;
-  height: 100vh;
+  height: 509px;
   position: absolute;
   transition: all 0.5s;
   background-repeat: no-repeat;
